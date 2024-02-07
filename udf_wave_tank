@@ -1,0 +1,10 @@
+#include "udf.h"
+#include "dynamesh_tools.h"
+DEFINE_CG_MOTION(piston,dt,vel,omega,time,dtime)
+{
+NV_S(vel, =, 0.0);
+NV_S(omega, =, 0.0);
+vel[0]=2;
+printf("\n");
+printf("\n x_velocity = %g \n", vel[0]);
+}
